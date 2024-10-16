@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detection</title>
+</head>
+<body>
+
+    <div class="navbar">
+
+        <nav>
+            <div id="site-logo">
+                <a href="{{ url_for('templates',filename='home.html') }}">
+                    <img id="logo" src="{{ url_for('static',filename='download.png') }}" alt="logo">
+                </a>
+            </div> <!-- End of Logo-->
+    
+    
+        </nav>
+    </div> <!--End of navbar -->
+
+    <div id="showcase2-container">
+        <div class="showcase">
+
+            <div style="width: 50%; float: left;">
+                <div>
+                    <h1 >DETECT DISEASE IN PLANT'S <span class="gradient-text">FASTER</span></h1>
+
+                    <p style="padding-top: 10px;">Detect most commonly occuring diseases in plants.  <code class="hi-gradient">Just upload</code> the image <br> of leaf of the plant you want to check.</p>
+                </div>
+            </div>
+
+            <div style="width: 50%; float: left;">
+                <div style="padding-left: 300px;">
+                    <h2>Start uploading now.</h2> 
+                    <form action= '/index' style="display: inline;">      
+                        <button class="upload-btn btn-orange-outline" >Upload Files</button>
+                    </form>  
+<!--                     <form action= '/index' style="display: inline;">
+                        <button class="upload-btn btn-green-outline">Know more</button>
+                    </form> -->
+                    <form onclick="https://ijrar.org/viewfull.php?&p_id=IJRAR1CNP015" style="display: inline;">
+                        <button class="upload-btn btn-green-outline">Know more</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div> <!-- end showcase 2 -->
+
+
+        
+ 
+</body>
+</html>

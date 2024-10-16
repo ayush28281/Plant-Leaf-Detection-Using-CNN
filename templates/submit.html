@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}"> -->
+  <link rel="stylesheet" href="../static/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Disease Detection</title>
+</head>
+<body>
+
+    
+    <div class="navbar">
+      <nav>
+          <div id="site-logo">
+              <a href="/">
+                  <img id="logo" src="{{ url_for('static',filename='download.png') }}" alt="logo">
+              </a>
+          </div> <!-- End of Logo-->
+
+
+      </nav>
+    </div> <!--End of navbar -->
+
+    <div class="submit-container">
+
+      <h1 style="text-align: center;"><b>{{title}}🍂</b></h1>
+
+      <center>
+        <div>
+              <div style="width: 30%;">
+    
+                <img src="{{image_url}}" width="350" height="350">
+    
+              </div>
+          </div>        
+        </center>
+        
+        <div class="desc">
+          <h5><b>
+            <!-- {% if pred==3 or pred==5 or pred==7 or pred==11 or pred==15 or pred==18 or pred==20 or pred==23 or
+            pred==24 or pred==25 or pred==28 or pred==38 %}
+            Tips to Grow Healthy Plants :
+            {% else %}
+            Brief Descritpion :
+            {% endif %} -->
+            Brief Descritpion :
+
+          </b></h5>
+          <p>
+            {{desc}}
+          </p>
+        </div>
+
+
+        <div class="prevent-disease">
+
+          <div id="precautions">
+            <h5><b>
+              {% if pred==3 or pred==5 or pred==7 or pred==11 or pred==15 or pred==18 or pred==20 or pred==23 or
+              pred==24 or pred==25 or pred==28 or pred==38 %}
+              Benefits :
+              {% else %}
+              Prevent This Plant Disease By follow below steps :
+              {% endif %}
+            </b></h5>
+          <p>
+            {{prevent}}
+          </p>
+
+          </div>
+
+          <div id="supplements">
+
+            <center>
+              <h5>
+                <b>
+                  {% if pred==3 or pred==5 or pred==7 or pred==11 or pred==15 or pred==18 or pred==20 or pred==23 or
+                  pred==24 or pred==25 or pred==28 or pred==38 %}
+                  Fertilizer :
+                  {% else %}
+                  Supplements :
+                  {% endif %}
+                </b>
+              </h5>
+  
+              <a style="text-decoration: none;" target="_blank" href={{buy_link}}><button class="upload-btn btn-blue-outline">Buy</button></a>
+            </center>
+
+          </div>
+
+        </div>
+
+    </div>
+
+  
+</body>
+</html>
